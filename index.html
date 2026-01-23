@@ -126,7 +126,20 @@
         }
     </style>
 </head>
+<script>
+let start = 0;
+let end = 109;        // your subscribers
+let speed = 30;      // smaller = faster
 
+let counter = setInterval(function () {
+    start++;
+    document.getElementById("subCount").innerText = start;
+
+    if (start >= end) {
+        clearInterval(counter);
+    }
+}, speed);
+</script>
 <body>
     <div class="container">
         <h1>DokEditor</h1>
