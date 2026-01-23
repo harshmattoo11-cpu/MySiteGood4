@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+
+    /* Animated gradient background */
+    background: linear-gradient(
+        120deg,
+        #000000,
+        #1a1a1a,
+        #bfa100,
+        #ffffff,
+        #000000
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* Glass container */
+.container {
+    padding: 50px;
+    margin: 40px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+h1 {
+    color: gold;
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.box {
+    border: 2px solid gold;
+    padding: 20px 30px;
+    border-radius: 12px;
+    min-width: 150px;
+    animation: slideUp 1.5s ease;
+}
+
+.box h3 {
+    color: gold;
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Skills */
+.skills {
+    margin-top: 40px;
+    animation: fadeIn 2s ease;
+}
+
+.skills h2 {
+    color: gold;
+}
+
+/* YouTube button */
+.youtube {
+    margin-top: 40px;
+    animation: slideUp 2s ease;
+}
+
+.youtube a {
+    text-decoration: none;
+    color: black;
+    background-color: gold;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.youtube a:hover {
+    background-color: white;
+    box-shadow: 0 0 20px gold;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
